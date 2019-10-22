@@ -1,7 +1,4 @@
 @extends ('layouts.layout')
-@section('title','TikkaMasala')
-
+@section('title','Contact')
 @section ('content')
-
-
 @endsection
