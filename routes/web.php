@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('/about', 'PagesController@about');
+Route::get('/2', 'PagesController@home2');
+Route::get('/about-us', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
 
 

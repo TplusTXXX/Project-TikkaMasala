@@ -61,22 +61,30 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        .alert  {
+            padding: 10px;
+            background-color: #38c172;
+            color: black;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 <ul>
     <li><a href="/">Home</a></li>
+    <li><a href="/2">Submit</a></li>
     <li><a href="/contact">Contact us</a></li>
     <li><a href="/about-us">About us</a></li>
 </ul>
 <h2>Tasks</h2>
-<ul>
-    @foreach ($tasks as $task)
-        <li>{{$task}}</li>
-    @endforeach
-</ul>
 <div class="content">
     <h1>@yield('title', 'TikkaMasala')</h1>
+    @if(isset($success))
+        <div class="alert">
+            {{ $success }}
+        </div>
+    @endif
     @yield('content')
 </div>
 
