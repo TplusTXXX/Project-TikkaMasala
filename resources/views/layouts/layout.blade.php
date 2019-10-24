@@ -17,66 +17,72 @@
             font-family: 'Nunito', sans-serif;
             font-weight: 200;
             height: 100vh;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /*Start Navbar*/
+        nav ul {
+            list-style-type: none;
             margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
         }
 
-        .full-height {
-            height: 100vh;
+        nav li {
+            float: left;
         }
 
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
+        nav li a {
+            display: block;
+            color: white;
             text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
+            padding: 14px 16px;
             text-decoration: none;
-            text-transform: uppercase;
         }
 
-        .m-b-md {
-            margin-bottom: 30px;
+        nav li a:hover {
+            background-color: #111;
         }
+        /*Einde Navbar*/
 
-        .alert  {
-            padding: 10px;
-            background-color: #38c172;
-            color: black;
-            font-weight: bold;
+        .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12{
+            display: inline-block;
+            float: left;
+            margin: 0 0.5%;
         }
+        .colrow{
+            width: 100%;
+            overflow: auto;
+            margin: 0 -10px;
+        }
+        .col1 {width: 8.33%;}
+        .col2 {width: 16.66%;}
+        .col3 {width: 25%;}
+        .col4 {width: 33.33%;}
+        .col5 {width: 41.66%;}
+        .col6 {width: 50%;}
+        .col7 {width: 58.33%;}
+        .col8 {width: 66.66%;}
+        .col9 {width: 75%;}
+        .col10 {width: 83.33%;}
+        .col11 {width: 91.66%;}
+        .col12 {width: 100%;}
     </style>
+
+    <nav>
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/2">Submit</a></li>
+        <li><a href="/contact">Contact us</a></li>
+        <li><a href="/about-us">About us</a></li>
+        </ul>
+    </nav>
 </head>
 <body>
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/2">Submit</a></li>
-    <li><a href="/contact">Contact us</a></li>
-    <li><a href="/about-us">About us</a></li>
-</ul>
+
 <h2>Tasks</h2>
 <div class="content">
     <h1>@yield('title', 'TikkaMasala')</h1>

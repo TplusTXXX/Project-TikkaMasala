@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Cases extends Migration
+class CreateCasesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class Cases extends Migration
      */
     public function up()
     {
-        Schema::create('cases_table', function (Blueprint $table) {
+        Schema::create('cases', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('caseTitle');
-            $table->longText('caseContent');
-            $table->text('created_by');
-            $table->timestamp('created_at')->useCurrent();
+            $table->string('title');
+            $table->longText('content');
+            $table->string('created_by')->default('Anoniem');
+            $table->timestamps();
         });
     }
 
@@ -29,6 +29,6 @@ class Cases extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('failed_jobs');
+        Schema::dropIfExists('cases');
     }
 }
