@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class Cases extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('cases_table', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->text('content');
-            $table->timestamps();
+            $table->text('caseTitle');
+            $table->longText('caseContent');
+            $table->text('created_by');
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 
@@ -28,6 +29,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('failed_jobs');
     }
 }

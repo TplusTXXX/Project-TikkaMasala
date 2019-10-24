@@ -7,23 +7,19 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
 
-    public $termTitle = "Yo";
 
     public function home()
     {
 
-        $termContent = '123';
-        $termPost = $this->termTitle . " " . $termContent;
-        return view('welcome', compact('termPost'));
+        return view('welcome');
 
 
     }
+
     public function home2()
     {
 
-        $termContent = '123';
-        $termPost = $this->termTitle . " " . $termContent;
-        return view('welcome', compact('termPost'))->with('success', "Created!");
+        return view('welcome')->with('success', "Created!");
 
 
     }
@@ -31,17 +27,13 @@ class PagesController extends Controller
     public function about()
     {
 
-        $termContent = '321';
-        $termPost = $this->termTitle . " " . $termContent;
-        return view('aboutus', compact('termPost'));
+        return view('aboutus');
     }
 
     public function contact()
     {
 
-        $termContent = 'abc';
-        $termPost = $this->termTitle . " " . $termContent;
-        return view('contact', compact('termPost'));
+        return view('contact');
 
 
     }
